@@ -26,4 +26,4 @@ for (let i = 0; i < numberOfOperations; i++) {
 	}
 }
 
-console.log(`You earned ${daysEarned} days of vacation!);
+console.log(`You earned ${daysEarned} days of vacation!`);
