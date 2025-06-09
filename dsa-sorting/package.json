@@ -1,0 +1,36 @@
+{
+  "name": "dsa-sorting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:bubble": "jest bubble.test.js",
+    "test:merge": "jest merge.test.js",
+    "test:insertion": "jest insertion.test.js",
+    "test:selection": "jest selection.test.js",
+    "test:quick": "jest quick.test.js",
+    "test:radix": "jest radix.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.1.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/.*"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ]
+  }
+}
