@@ -10,26 +10,73 @@ class Graph {
     this.nodes = new Set();
   }
 
-  // this function accepts a Node instance and adds it to the nodes property on the graph
-  addVertex(vertex) {}
+  // add a single vertex
+  addVertex(vertex) {
+    this.nodes.add(vertex);
+  }
 
-  // this function accepts an array of Node instances and adds them to the nodes property on the graph
-  addVertices(vertexArray) {}
+  // add multiple vertices
+  addVertices(vertexArray) {
+    for (let v of vertexArray) this.addVertex(v);
+  }
 
-  // this function accepts two vertices and updates their adjacent values to include the other vertex
-  addEdge(v1, v2) {}
+  // undirected edge: add each to the other's adjacency set
+  addEdge(v1, v2) {
+    v1.adjacent.add(v2);
+    v2.adjacent.add(v1);
+  }
 
-  // this function accepts two vertices and updates their adjacent values to remove the other vertex
-  removeEdge(v1, v2) {}
+  // remove undirected edge
+  removeEdge(v1, v2) {
+    v1.adjacent.delete(v2);
+    v2.adjacent.delete(v1);
+  }
 
-  // this function accepts a vertex and removes it from the nodes property, it also updates any adjacency lists that include that vertex
-  removeVertex(vertex) {}
+  // remove vertex and all incident edges
+  removeVertex(vertex) {
+    for (let neighbor of vertex.adjacent) {
+      neighbor.adjacent.delete(vertex);
+    }
+    vertex.adjacent.clear();
+    this.nodes.delete(vertex);
+  }
 
-  // this function returns an array of Node values using DFS
-  depthFirstSearch(start) {}
+  // DFS: return array of node values
+  depthFirstSearch(start) {
+    const visited = new Set();
+    const out = [];
 
-  // this function returns an array of Node values using BFS
-  breadthFirstSearch(start) {}
+    function dfs(node) {
+      if (visited.has(node)) return;
+      visited.add(node);
+      out.push(node.value);
+      for (let nxt of node.adjacent) {
+        if (!visited.has(nxt)) dfs(nxt);
+      }
+    }
+
+    dfs(start);
+    return out;
+  }
+
+  // BFS: return array of node values
+  breadthFirstSearch(start) {
+    const seen = new Set([start]); // track enqueued to avoid duplicates
+    const out = [];
+    const queue = [start];
+
+    while (queue.length) {
+      const node = queue.shift();
+      out.push(node.value);
+      for (let nxt of node.adjacent) {
+        if (!seen.has(nxt)) {
+          seen.add(nxt);
+          queue.push(nxt);
+        }
+      }
+    }
+    return out;
+  }
 }
 
-module.exports = {Graph, Node}
+module.exports = { Graph, Node };
