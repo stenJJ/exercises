@@ -1,0 +1,13 @@
+
+# list people + how many films they appear in
+{
+  allPeople {
+    people {
+      name
+      filmConnection {
+        totalCount
+      }
+    }
+  }
+}
+# (ran this in the playground)

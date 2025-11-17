@@ -1,0 +1,16 @@
+
+# first 3 vehicles + pilots + pilot species
+{
+  allVehicles(first: 3) {
+    vehicles {
+      name
+      pilotConnection {
+        pilots {
+          name
+          species { name }
+        }
+      }
+    }
+  }
+}
+# (ran this in the playground)

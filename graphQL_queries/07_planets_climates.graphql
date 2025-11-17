@@ -1,0 +1,10 @@
+
+# first 5 planets (name + climates array)
+{
+  allPlanets(first: 5) {
+    planets {
+      ...PlanetBasics
+    }
+  }
+}
+# (ran this in the playground)

@@ -1,0 +1,8 @@
+
+# aggregate films total
+{
+  allFilms {
+    totalCount
+  }
+}
+# (ran this in the playground)

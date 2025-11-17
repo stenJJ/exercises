@@ -1,0 +1,10 @@
+
+# first 5 planets (names)
+{
+  allPlanets(first: 5) {
+    planets {
+      name
+    }
+  }
+}
+# (ran this in the playground)

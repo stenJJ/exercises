@@ -1,0 +1,16 @@
+
+# full-ish profile for a person (here: Luke)
+{
+  person(id: "cGVvcGxlOjE=") {
+    name
+    birthYear
+    homeworld { name }
+    filmConnection {
+      films { title }
+    }
+    starshipConnection {
+      starships { name }
+    }
+  }
+}
+# (ran this in the playground)

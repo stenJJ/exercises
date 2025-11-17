@@ -1,0 +1,11 @@
+
+# first 5 species (name + language)
+{
+  allSpecies(first: 5) {
+    species {
+      name
+      language
+    }
+  }
+}
+# (ran this in the playground)

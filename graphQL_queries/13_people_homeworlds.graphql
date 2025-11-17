@@ -1,0 +1,14 @@
+
+# first 5 people + their homeworld name + population
+{
+  allPeople(first: 5) {
+    people {
+      name
+      homeworld {
+        name
+        population
+      }
+    }
+  }
+}
+# (ran this in the playground)

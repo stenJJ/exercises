@@ -1,0 +1,10 @@
+
+# starships (name + model), limit 3
+{
+  allStarships(first: 3) {
+    starships {
+      ...StarshipBasics
+    }
+  }
+}
+# (ran this in the playground)

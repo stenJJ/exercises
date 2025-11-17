@@ -1,0 +1,13 @@
+
+# characters in a specific film (id here = "ZmlsbXM6MQ==", A New Hope)
+{
+  film(id: "ZmlsbXM6MQ==") {
+    title
+    characterConnection {
+      characters {
+        name
+      }
+    }
+  }
+}
+# (ran this in the playground)

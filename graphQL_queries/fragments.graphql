@@ -1,0 +1,20 @@
+# fragments.graphql
+# (not all queries use these, but i experimented a bit)
+
+fragment FilmBasics on Film {
+  title
+}
+
+fragment PersonBasics on Person {
+  name
+}
+
+fragment PlanetBasics on Planet {
+  name
+  climates
+}
+
+fragment StarshipBasics on Starship {
+  name
+  model
+}

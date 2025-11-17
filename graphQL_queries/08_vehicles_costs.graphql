@@ -1,0 +1,11 @@
+
+# first 3 vehicles (name + cost)
+{
+  allVehicles(first: 3) {
+    vehicles {
+      name
+      costInCredits
+    }
+  }
+}
+# (ran this in the playground)

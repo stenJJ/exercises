@@ -1,0 +1,10 @@
+
+# list all films (titles)
+{
+  allFilms {
+    films {
+      ...FilmBasics
+    }
+  }
+}
+# (ran this in the playground)
