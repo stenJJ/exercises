@@ -1,10 +1,9 @@
 
-# starships (name + model), limit 3
 {
   allStarships(first: 3) {
     starships {
-      ...StarshipBasics
+      name
+      model
     }
   }
 }
-# (ran this in the playground)
