@@ -3,7 +3,8 @@
 {
   allPlanets(first: 5) {
     planets {
-      ...PlanetBasics
+      name
+      climates
     }
   }
 }
