@@ -3,8 +3,9 @@
 {
   allFilms {
     films {
-      ...FilmBasics
+      title
     }
   }
 }
+
 # (ran this in the playground)
