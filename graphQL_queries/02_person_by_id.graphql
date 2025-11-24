@@ -1,8 +1,6 @@
 
-# fetch a specific character by id (example: Luke)
 {
   person(id: "cGVvcGxlOjE=") {
-    ...PersonBasics
+    name
   }
 }
-# (ran this in the playground)
